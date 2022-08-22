@@ -40,6 +40,7 @@ function NewTicket() {
 
   function onSubmit(e) {
     e.preventDefault();
+    console.log(product, description);
     dispatch(createTicket({ product, description }));
   }
 
