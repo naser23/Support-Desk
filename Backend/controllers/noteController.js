@@ -18,7 +18,7 @@ const getNotes = asyncHandler(async (req, res) => {
   const ticket = await Ticket.findById(req.params.ticketId);
   // Why the fuck is this null?
   console.log(`ticket: ${ticket}`);
-  console.log(`ticket.user: ${ticket.user}`);
+  console.log(req.params);
   if (ticket.user.toString() !== req.user.id) {
     res.status(401);
     throw new Error("User not auhorized");

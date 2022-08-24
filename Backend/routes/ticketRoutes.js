@@ -13,7 +13,7 @@ const {
 router.route("/").get(protect, getTickets).post(protect, createTickets);
 
 // Re-route into note router
-router.use("/:ticetId/notes", noteRouter);
+router.use("/:ticketId/notes", noteRouter);
 router
   .route("/:id")
   .get(protect, getUserTicket)
