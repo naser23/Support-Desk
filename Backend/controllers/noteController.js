@@ -9,7 +9,6 @@ const Ticket = require("../models/ticketModel");
 const getNotes = asyncHandler(async (req, res) => {
   // Get user using the id in the JWT
   const user = await User.findById(req.user.id);
-  console.log(`User: ${user}`);
 
   if (!user) {
     res.status(401);
@@ -31,7 +30,6 @@ const getNotes = asyncHandler(async (req, res) => {
 const addNote = asyncHandler(async (req, res) => {
   // Get user using the id in the JWT
   const user = await User.findById(req.user.id);
-  console.log(`User: ${user}`);
 
   if (!user) {
     res.status(401);
